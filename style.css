@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte Quicksand do Google Fonts */
-
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
 * {
     box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
 }
@@ -15,7 +14,7 @@ body {
     margin: 0; /* Remove a margem padrão do body */
     background: var(--bg-color); /* Define a cor de fundo usando uma variável */
     color: var(--secondary-color); /* Define a cor do texto padrão usando uma variável */
-    font-family: "Quicksand", sans-serif; /* Define a família da fonte */
+   font-family: "Bitcount", system-ui; /* Define a família da fonte */
 }
 
 header {
@@ -89,23 +88,25 @@ div input:focus {
 }
 
 main {
-    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
     max-width: 80rem; /* Largura máxima do conteúdo principal */
     margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente */
     margin-top: 2rem; /* Margem no topo */
-    height: calc(100vh - 10rem - 4rem); /* Calcula a altura para preencher o espaço restante da tela */
+    padding: 0 1rem; /* Espaçamento interno para não colar nas bordas */
+    display: flex; /* Ativa o layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os cards no container */
+    gap: 1.5rem; /* Adiciona um espaçamento entre os cards */
 }
 
 article {
-    background: none; /* Sem cor de fundo */
-    border-radius: 0; /* Sem bordas arredondadas */
-    padding: 0; /* Remove o padding */
-    padding: 0 1rem; /* Espaçamento interno nos lados */
-    margin-bottom: 1.25rem; /* Margem inferior */
-    box-shadow: none; /* Sem sombra */
+    background: #292a2d; /* Um pouco mais claro que o fundo para destacar */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 1.5rem; /* Espaçamento interno */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra sutil */
     transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Transição suave */
-    border-bottom: 1px solid var(--bg-color); /* Borda inferior */
-    padding-bottom: 1.5rem; /* Espaçamento interno inferior */
+    border: 1px solid #3c4043; /* Borda sutil */
+    flex-basis: 350px; /* Define uma largura base para cada card */
+    flex-grow: 1; /* Permite que o card cresça se houver espaço */
 }
 
 article:hover {
